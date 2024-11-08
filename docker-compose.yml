@@ -2,7 +2,7 @@ version: '3'
 services:
   presto:
     hostname: presto
-    image: 'starburstdata/presto:350-e.7'
+    image: 'prestodb/presto:0.290-edge18'
     container_name: presto
     ports:
       - '8080:8080'
