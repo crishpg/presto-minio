@@ -7,7 +7,7 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - './presto/presto-cli-0.253-executable.jar:/usr/bin/presto'
+      - './presto/presto-cli-0.289-executable.jar:/usr/bin/presto'
       - './presto/minio.properties:/usr/lib/presto/etc/catalog/minio.properties'
   hadoop:
     hostname: hadoop-master
