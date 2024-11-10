@@ -18,6 +18,7 @@ services:
       AWS_SECRET_ACCESS_KEY: minio123
     volumes:
       - './hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml'
+      - './hadoop/ibm-cos-java-sdk-core-2.13.6.jar:/opt/hive/lib/ibm-cos-java-sdk-core-2.13.6.jar'
   mc-job:
     image: 'minio/mc:latest'
     environment:
