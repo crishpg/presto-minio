@@ -20,6 +20,8 @@ services:
       - './hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml'
       - './hadoop/ibm-cos-java-sdk-core-2.13.6.jar:/opt/hive/lib/ibm-cos-java-sdk-core-2.13.6.jar'
       - './hadoop/sdk-core-9.22.0.jar:/opt/hive/lib/sdk-core-9.22.0.jar'
+      - './hadoop/hadoop-aws-3.4.1.jar:/opt/hive/lib/hadoop-aws-3.4.1.jar'
+      - './hadoop/aws-java-sdk-1.12.777.jar:/opt/hive/lib/aws-java-sdk-1.12.777.jar'
   mc-job:
     image: 'minio/mc:latest'
     environment:
