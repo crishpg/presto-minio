@@ -22,15 +22,4 @@ services:
       - './hadoop/sdk-core-9.22.0.jar:/opt/hive/lib/sdk-core-9.22.0.jar'
       - './hadoop/hadoop-aws-3.4.1.jar:/opt/hive/lib/hadoop-aws-3.4.1.jar'
       - './hadoop/aws-java-sdk-1.12.777.jar:/opt/hive/lib/aws-java-sdk-1.12.777.jar'
-  mc-job:
-    image: 'minio/mc:latest'
-    environment:
-      MC_HOST_presto: "https://minio:minio123@play.min.io"
-    volumes:
-      - './minio/data:/minio'
-    entrypoint: |
-      /bin/bash -c "
-      /usr/bin/mc mb --quiet presto/customer-data-text;
-      /usr/bin/mc mb --quiet presto/customer-data-orc;
-      /usr/bin/mc mirror minio/customer-data-text presto/customer-data-text;
-      "
+ 
